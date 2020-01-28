@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Digital_Board)(type KiCad)(uri ${KIPRJMOD}/Digital_Board.pretty)(options "")(descr ""))
+  (lib (name LSM9DS0lib)(type KiCad)(uri C:/Users/jarod/Downloads/LSM9DS0lib)(options "")(descr ""))
+)

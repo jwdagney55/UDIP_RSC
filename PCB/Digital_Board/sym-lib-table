@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name POWERSCHEM-rescue)(type Legacy)(uri C:/Users/jarod/OneDrive/Documents/KiCad/Power_Schematic/POWERSCHEM-rescue.lib)(options "")(descr ""))
+  (lib (name RSCSensors)(type Legacy)(uri C:/Users/jarod/OneDrive/Documents/DigitalSchematic/RSCSensors.lib)(options "")(descr ""))
+  (lib (name Digital_Board-rescue)(type Legacy)(uri ${KIPRJMOD}/Digital_Board-rescue.lib)(options "")(descr ""))
+)
