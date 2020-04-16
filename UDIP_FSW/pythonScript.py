@@ -17,8 +17,8 @@ len_head = 13
 len_sens = 25
 
 len_brst = 127 * 10 * 2 * 3
-len_med = 255 * 2 * 3
-len_lrg = 255 * 2 * 3
+len_med = 253 * 2 * 3
+len_lrg = 253 * 2 * 3
 
 
 def readFile(fileName, out = False) :
