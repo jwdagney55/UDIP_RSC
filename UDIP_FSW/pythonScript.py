@@ -16,8 +16,8 @@ len_head = 13
 
 len_sens = 25
 
-len_brst = 127 * 10 * 2 * 3
-len_med = 253 * 2 * 3
+len_brst = 133 * 10 * 2 * 3
+len_med = 265 * 2 * 3
 len_lrg = 253 * 2 * 3
 
 
@@ -119,6 +119,7 @@ def readFile(fileName, out = False) :
             arr = raw[(loc + len_head) : (loc + len_head + len_med)]
             for x in range(255) :
                 adc = unpack('<HHH', arr[x*2*3:x*2*3+6])
+                adc = adc2Current(adc)
                 medADC0[i][x] = adc[0] * (3.3/4095.)
                 medADC1[i][x] = adc[1] * (3.3/4095.)
                 medADC2[i][x] = adc[2] * (3.3/4095.)
@@ -225,5 +226,37 @@ def readFile(fileName, out = False) :
     
     
     
+rADC0 = 0
+rADC1 = 0
+rADC2 = 0
+
+
+#adc2Current takes an array of Arduino Due Analog values (12 bit resolution)
+# and returns the associated 
+def adc2Current(adc) :
+    convertedADC = {0., 0., 0.}
+    for i in range(3) :
+        if i == 0 :
+            #No gain correction
+            convertedADC[i] = adc[i] * 3.3/4095.
+            #Voltage Divider takes off 1/4 of the voltage
+            convertedADC[i] = convertedADC[i] * 4. #Maybe 12/3.3 ???
+            #Now the transimpedance amplifier stuff
+            
+        if i == 1 :
+            #One gain correction
+            
+        if i == 2 :
+            #Two gain correction
+    
+def adc2Current0(adc) :
     
     
+    
+    
+def adc2Current1(adc) :
+    
+    
+    
+    
+def adc2Current2(adc) :
